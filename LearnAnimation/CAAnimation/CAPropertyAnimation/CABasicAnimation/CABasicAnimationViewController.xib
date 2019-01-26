@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CABasicAnimationViewController">
             <connections>
                 <outlet property="exampleView" destination="VtO-2r-l2A" id="ZfP-l5-11i"/>
+                <outlet property="listView" destination="TV7-P5-8Ax" id="Ic7-h9-XUt"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
