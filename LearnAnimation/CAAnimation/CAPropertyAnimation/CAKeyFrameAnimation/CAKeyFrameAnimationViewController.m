@@ -80,7 +80,7 @@ static NSString * nibName = @"CAKeyFrameAnimationViewController";
                           [NSNumber numberWithFloat:0.5],
                           [NSNumber numberWithFloat:0.6],
                           [NSNumber numberWithFloat:0.7],
-                          [NSNumber numberWithFloat:1]];
+                          [NSNumber numberWithFloat:1]]; // 可选  默认平分
     animation.timingFunctions = @[[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut],
                                   [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear],
                                   [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut],
@@ -116,8 +116,7 @@ static NSString * nibName = @"CAKeyFrameAnimationViewController";
     animation.repeatCount=1;
     animation.removedOnCompletion = NO;
     animation.fillMode = kCAFillModeForwards;
-    animation.duration = 6.0f;
-    animation.timingFunction=[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    animation.duration = 10.0f;
     [self.exampleView.layer addAnimation:animation forKey:nil];
 }
 @end
