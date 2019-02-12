@@ -42,7 +42,11 @@ static NSString * cellIdentifier = @"cellIdentifier";
     self.navigationItem.title = @"CABasicAnimation";
     UIButton * rightButton = [[UIButton alloc]init];
     [rightButton setTitle:@"开始动画" forState:UIControlStateNormal];
-    [rightButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [rightButton setTitleColor:[UIColor colorWithRed:45/255.0
+                                               green:126/255.0
+                                                blue:250/255.0
+                                               alpha:1]
+                      forState:UIControlStateNormal];
     [rightButton addTarget:self action:@selector(rightBarButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem * rightBarButton = [[UIBarButtonItem alloc]initWithCustomView:rightButton];
     self.navigationItem.rightBarButtonItem = rightBarButton;
