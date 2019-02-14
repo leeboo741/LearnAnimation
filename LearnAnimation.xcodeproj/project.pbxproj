@@ -27,6 +27,8 @@
 		0436A2DD21FC02260097B804 /* CATrainsitionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0436A2DB21FC02260097B804 /* CATrainsitionViewController.xib */; };
 		0436A2E121FC02400097B804 /* CAAnimationGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0436A2DF21FC02400097B804 /* CAAnimationGroupViewController.m */; };
 		0436A2E221FC02400097B804 /* CAAnimationGroupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0436A2E021FC02400097B804 /* CAAnimationGroupViewController.xib */; };
+		04641AA1221513F80018B135 /* UIAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04641A9F221513F80018B135 /* UIAnimationViewController.m */; };
+		04641AA2221513F80018B135 /* UIAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04641AA0221513F80018B135 /* UIAnimationViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,9 @@
 		0436A2DE21FC02400097B804 /* CAAnimationGroupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAAnimationGroupViewController.h; sourceTree = "<group>"; };
 		0436A2DF21FC02400097B804 /* CAAnimationGroupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAAnimationGroupViewController.m; sourceTree = "<group>"; };
 		0436A2E021FC02400097B804 /* CAAnimationGroupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CAAnimationGroupViewController.xib; sourceTree = "<group>"; };
+		04641A9E221513F80018B135 /* UIAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIAnimationViewController.h; sourceTree = "<group>"; };
+		04641A9F221513F80018B135 /* UIAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIAnimationViewController.m; sourceTree = "<group>"; };
+		04641AA0221513F80018B135 /* UIAnimationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIAnimationViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +137,7 @@
 		0436A28221FB13030097B804 /* LearnAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				04641A9D221513BB0018B135 /* UIAnimation */,
 				0436A2C221FBF34C0097B804 /* CAAnimation */,
 				0436A2BB21FB173D0097B804 /* Base */,
 				0436A28321FB13030097B804 /* AppDelegate.h */,
@@ -179,9 +185,9 @@
 		0436A2C221FBF34C0097B804 /* CAAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				0436A2C821FBF41E0097B804 /* CATransition */,
 				0436A2C421FBF3BD0097B804 /* CAPropertyAnimation */,
 				0436A2C321FBF3AB0097B804 /* CAAnimationGroup */,
+				0436A2C821FBF41E0097B804 /* CATransition */,
 			);
 			path = CAAnimation;
 			sourceTree = "<group>";
@@ -199,8 +205,8 @@
 		0436A2C421FBF3BD0097B804 /* CAPropertyAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				0436A2C621FBF3ED0097B804 /* CAKeyFrameAnimation */,
 				0436A2C521FBF3DB0097B804 /* CABasicAnimation */,
+				0436A2C621FBF3ED0097B804 /* CAKeyFrameAnimation */,
 			);
 			path = CAPropertyAnimation;
 			sourceTree = "<group>";
@@ -208,10 +214,10 @@
 		0436A2C521FBF3DB0097B804 /* CABasicAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				0436A2C721FBF4020097B804 /* CASpringAnimation */,
 				0436A2CA21FBFF2D0097B804 /* CABasicAnimationViewController.h */,
 				0436A2CB21FBFF2D0097B804 /* CABasicAnimationViewController.m */,
 				0436A2CC21FBFF2D0097B804 /* CABasicAnimationViewController.xib */,
+				0436A2C721FBF4020097B804 /* CASpringAnimation */,
 			);
 			path = CABasicAnimation;
 			sourceTree = "<group>";
@@ -244,6 +250,16 @@
 				0436A2DB21FC02260097B804 /* CATrainsitionViewController.xib */,
 			);
 			path = CATransition;
+			sourceTree = "<group>";
+		};
+		04641A9D221513BB0018B135 /* UIAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				04641A9E221513F80018B135 /* UIAnimationViewController.h */,
+				04641A9F221513F80018B135 /* UIAnimationViewController.m */,
+				04641AA0221513F80018B135 /* UIAnimationViewController.xib */,
+			);
+			path = UIAnimation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0436A2CE21FBFF2D0097B804 /* CABasicAnimationViewController.xib in Resources */,
+				04641AA2221513F80018B135 /* UIAnimationViewController.xib in Resources */,
 				0436A29021FB130C0097B804 /* LaunchScreen.storyboard in Resources */,
 				0436A2C021FB17580097B804 /* BaseViewController.xib in Resources */,
 				0436A2D821FC020F0097B804 /* CAKeyFrameAnimationViewController.xib in Resources */,
@@ -389,6 +406,7 @@
 				0436A2BF21FB17580097B804 /* BaseViewController.m in Sources */,
 				0436A29321FB130C0097B804 /* main.m in Sources */,
 				0436A2D721FC020F0097B804 /* CAKeyFrameAnimationViewController.m in Sources */,
+				04641AA1221513F80018B135 /* UIAnimationViewController.m in Sources */,
 				0436A28521FB13030097B804 /* AppDelegate.m in Sources */,
 				0436A2DC21FC02260097B804 /* CATrainsitionViewController.m in Sources */,
 			);

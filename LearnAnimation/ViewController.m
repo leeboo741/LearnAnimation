@@ -12,6 +12,7 @@
 #import "CAAnimation/CAPropertyAnimation/CABasicAnimation/CABasicAnimationViewController.h"
 #import "CAAnimation/CAPropertyAnimation/CABasicAnimation/CASpringAnimation/CASpringAnimationViewController.h"
 #import "CAAnimation/CAPropertyAnimation/CAKeyFrameAnimation/CAKeyFrameAnimationViewController.h"
+#import "UIAnimation/UIAnimationViewController.h"
 
 typedef NS_ENUM(NSInteger,VC_INDEX){
     VC_INDEX_CABasicAnimation = 0,
@@ -111,7 +112,8 @@ static NSString * cellIdentifier = @"cellIdentifier";
             [self.navigationController pushViewController:viewController animated:YES];
         }
     } else if (indexPath.section == ANIMATION_TYPE_UIViewAnimation) {
-        
+        UIAnimationViewController * viewController = [UIAnimationViewController initWithNib];
+        [self.navigationController pushViewController:viewController animated:YES];
     }
     
 }
