@@ -37,16 +37,7 @@ static NSString * nibName = @"CATrainsitionViewController";
 -(void)initNavi{
     [super initNavi];
     self.navigationItem.title = @"CATransition";
-    UIButton * rightButton = [[UIButton alloc]init];
-    [rightButton setTitle:@"开始动画" forState:UIControlStateNormal];
-    [rightButton setTitleColor:[UIColor colorWithRed:45/255.0
-                                               green:126/255.0
-                                                blue:250/255.0
-                                               alpha:1]
-                      forState:UIControlStateNormal];
-    [rightButton addTarget:self action:@selector(rightBarButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem * rightBarButton = [[UIBarButtonItem alloc]initWithCustomView:rightButton];
-    self.navigationItem.rightBarButtonItem = rightBarButton;
+    self.navigationItem.rightBarButtonItem = nil;
 }
 -(void)initView{
     [super initView];
@@ -63,10 +54,6 @@ static NSString * nibName = @"CATrainsitionViewController";
 #pragma mark -
 #pragma mark Action
 
--(void)rightBarButtonAction:(UIButton *)sender{
-    
-}
-
 -(void)tapIamgeView{
     [self showAnimationWithType:self.selectedType subType:self.selectedSubType];
     self.exampleImageView.image = self.willShowImage;
@@ -74,7 +61,7 @@ static NSString * nibName = @"CATrainsitionViewController";
 }
 
 - (IBAction)selectSubType:(id)sender {
-    self.selectedSubType = [[self getTransitionSubTypes] objectAtIndex:self.subTypeSegment.selectedSegmentIndex];
+    
 }
 
 -(void)nextIndex{
@@ -97,7 +84,6 @@ static NSString * nibName = @"CATrainsitionViewController";
     [self.exampleImageView.layer addAnimation:animation forKey:type];
 }
 -(void)animationDidStart:(CAAnimation *)anim{
-    
     NSInteger index = self.tapImageIndex == 0 ? [self getTransitionTypes].count -1 : self.tapImageIndex - 1;
     self.showTypeLabel.text = [[self getTransitionTypes] objectAtIndex:index];
     [UIView animateWithDuration:0.3 animations:^{
@@ -130,7 +116,6 @@ static NSString * nibName = @"CATrainsitionViewController";
              kCATransitionPush,
              kCATransitionReveal,
              @"cube",
-             
              @"reveal",
              @"moveIn",
              @"fade", // default
